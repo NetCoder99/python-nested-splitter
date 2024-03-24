@@ -7,4 +7,4 @@ class ParensCords:
         self.close_point  = close_point
         self.nest_level   = -1
     def __repr__(self):
-        return f'[{self.open_point:>3}:{self.close_point:>3}] :: {self.nest_level}'
+        return f'[{self.open_point : >4}:{self.close_point : >4}] :: {self.nest_level}'
