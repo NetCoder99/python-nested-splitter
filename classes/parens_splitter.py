@@ -104,8 +104,5 @@ def getParensCoords(inp_str: str) -> List[ParensCords]:
 
     return parens_coords_list
 
-def sortParensCoords(parens_coords: List[ParensCords]):
-    return parens_coords.sort(key=sortParensFunc)
-
 def sortParensFunc(parens_coord: ParensCords):
     return parens_coord.open_point
