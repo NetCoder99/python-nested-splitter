@@ -15,8 +15,7 @@ from models.parens_coords import ParensCords
 # bonus that the depth, or length, of the opening paren stack will reflect
 # how deeply nested the parentheses set is.
 # -----------------------------------------------------------------------------
-def splitWhenClauseLine(inp_str: str):
-    print(inp_str)
+def splitNestedString(inp_str: str):
     split_points = getSplitPoints(inp_str)
     str_parts    = []
     start = 0
@@ -98,10 +97,8 @@ def getParensCoords(inp_str: str) -> List[ParensCords]:
                 parens_coords_list.append(parens_cords)
             except Exception:
                 raise Exception('Unbalanced closing parentheses detected!')
-
     if len(tmp_stack) > 0:
         raise Exception('Unbalanced opening parentheses detected!')
-
     return parens_coords_list
 
 def sortParensFunc(parens_coord: ParensCords):
